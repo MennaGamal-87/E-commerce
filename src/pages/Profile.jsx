@@ -5,48 +5,29 @@ import { FaMapMarkerAlt, FaCode, FaUserCircle } from 'react-icons/fa';
 const Profile=({user,logOut})=>{
     const[loading,setLoading]=useState(true)
     useEffect(() => {
-        if (user) {  // Check if user exists *first*
-          setLoading(false); // Then, set loading to false
+        if (user) {  
+          setLoading(false); 
         } else {
-          setLoading(true); // Keep loading if no user
+          setLoading(true); 
         }
-      }, [user]); // Add user to dependency array
+      }, [user]); 
     
 
 
       if (loading) {
-        return <div>Loading profile...</div>; // Display loading message
+        return <div>Loading profile...</div>; 
       }
     
-      if (!user) { // Handle the case where the user is null (not logged in)
+      if (!user) {
           return <div>Please log in to view your profile.</div>;
       }
     return(
         <>
-        {/* <h1>My Profile</h1>
-       <div>
-        <img src={user.image} alt="" />
-        <div>
-        <h3>Name: {user.username}</h3>
-        <h3>Email:{user.email} </h3>
-        <h3>Password: {user.password}</h3>
-        <h3>Address: {user.address.address}</h3>
-        <h3>City: {user.address.city}</h3>
-        <h3>Phone Number: {user.phone}</h3>
-        </div>
-       </div> */}
 
-
-
-
-       <div className="  bg-gray-200 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center p-4">
+    <div className="  bg-gray-200 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center p-4">
       <div className="relative w-[80%] bg-white rounded-lg shadow-xl max-w-md  transition-all duration-300 ease-in-out transform hover:scale-105">
         <div className="absolute top-0 right-0 pt-4 pr-4">
-          {/* <button className="text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150">
-            <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button> */}
+         
         </div>
         <div className="p-6 sm:p-8">
           <div className="flex flex-col items-center">
