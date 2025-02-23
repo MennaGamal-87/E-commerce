@@ -31,6 +31,10 @@ const Cart=({cart,setCart})=>{
     const checkOut=()=>{
       setCart([])
     }
+
+    const calculateTotalPrice = () => {
+      return cart.reduce((total, product) => total + product.price * quantity, 0);
+    };
     return(
         <>
         {cart.length === 0 ? (
@@ -89,7 +93,7 @@ const Cart=({cart,setCart})=>{
                                     </svg>
                                 </button>
                             </div>
-                            <h6 className="text-indigo-600 font-manrope font-bold text-2xl leading-9 text-right">${product.price * quantity}</h6>
+                            <h6 className="text-indigo-600 font-manrope font-bold text-2xl leading-9 text-right">${product.price * quantity }</h6>
                         </div>
                     </div>
                 </div>
@@ -106,7 +110,7 @@ const Cart=({cart,setCart})=>{
                         <button
                             className="rounded-full py-2.5 px-3 bg-indigo-50 text-indigo-600 font-semibold text-xs text-center whitespace-nowrap transition-all duration-500 hover:bg-indigo-100">Promo
                             Code?</button>
-                        <h6 className="font-manrope font-bold text-3xl lead-10 text-indigo-600">$440</h6>
+                        <h6 className="font-manrope font-bold text-3xl lead-10 text-indigo-600">${calculateTotalPrice()}</h6>
                     </div>
                 </div>
                 <div className="max-lg:max-w-lg max-lg:mx-auto">
