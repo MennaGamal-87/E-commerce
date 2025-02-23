@@ -15,40 +15,17 @@ const Cart=({cart,setCart})=>{
    }, []);
   const[quantity,setQuantity]=useState(1)
   const incrementQuantity=()=>{
-        setQuantity((prevQuantity)=> prevQuantity +1);
-  //  products&& products.map((prod)=>{
-  //     if(data.id==prod.id){
-  //       setItems(items++)
-  //       console.log(items)
-  //     }
-  //   })
-    
+        setQuantity((prevQuantity)=> prevQuantity +1);   
   }
 
   const decrementQuantity=()=>{
         if(quantity>1){
           setQuantity((prevQuantity)=>prevQuantity -1);
         }
-    // if(items>= 1)
-    //   {products&&products.map((prod)=>{
-    //     if(data.id==prod.id){
-    //       setItems(items--)
-    //       console.log(items)
-    //     }
-    //   })
-    //   }
     }
 
  const deleteProduct =(itemId)=>{
       setCart((prevItems)=>prevItems.filter((item)=>item.id !== itemId))
-  // products&&products.filter((prod)=>{
-  //   if(prod.id != data.id ){
-  //     console.log(prod)
-      
-  //     setProducts(prod)
-      
-  //   }
-  // })
 
     }
     const checkOut=()=>{
@@ -61,10 +38,6 @@ const Cart=({cart,setCart})=>{
       ) : (
         <section className="py-24 relative">
                 <div  className="w-full max-w-7xl px-4 md:px-5 lg-6 mx-auto">
-
-
-               
-            
             <h2 className="title font-manrope font-bold text-4xl leading-10 mb-8 text-center text-black">Shopping Cart
             </h2>
           {cart.map((product, index) => (
