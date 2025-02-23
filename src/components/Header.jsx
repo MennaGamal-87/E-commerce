@@ -20,10 +20,6 @@ import DropDownMenu from "./DropDownMenu";
 
 const Header=({cart,user,logOut})=>{
 const [openNav, setOpenNav] = useState(false);
-// const logOut=()=>{
-//   navigate('/signin')
-//   user=null
-// }
  useEffect(() => {
     window.addEventListener(
       "resize",
@@ -190,26 +186,4 @@ const [openNav, setOpenNav] = useState(false);
     </div>
   );
 }
-
-
-
-
-
-
-
-
-// const Header=({cart})=>{
-//     return(
-//         <>
-//         <div className="container mx-auto w-full bg-dark">
-//         <Link style={{margin:'2%'}} to="/">Home</Link>
-//         <Link style={{margin:'2%'}} to="/products">Shop</Link>
-//         <Link style={{margin:'2%'}} to="/cart">        <FaShoppingCart /> ({cart.length})
-//         </Link>
-//         <Link style={{margin:'2%'}} to="/signin"><FiLogIn />
-//         </Link>
-//         </div>
-//         </>
-//     )
-// }
 export default Header;

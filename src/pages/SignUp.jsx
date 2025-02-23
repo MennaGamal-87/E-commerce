@@ -132,7 +132,7 @@ const Signup = () => {
 
         <form className="mt-8 space-y-6">
           <div className="space-y-4">
-            {/* Full Name */}
+         
             <div>
               <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">
                 Full Name
@@ -151,7 +151,7 @@ const Signup = () => {
               {errors.fullName && <p className="mt-1 text-sm text-red-600">{errors.fullName}</p>}
             </div>
 
-            {/* Email */}
+          
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 Email address
@@ -170,7 +170,7 @@ const Signup = () => {
               {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
             </div>
 
-            {/* Password */}
+          
             <div className="relative">
               <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                 Password
@@ -198,7 +198,7 @@ const Signup = () => {
               {errors.password && <p className="mt-1 text-sm text-red-600">{errors.password}</p>}
             </div>
 
-            {/* Confirm Password */}
+         
             <div className="relative">
               <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
                 Confirm Password
@@ -226,7 +226,7 @@ const Signup = () => {
               {errors.confirmPassword && <p className="mt-1 text-sm text-red-600">{errors.confirmPassword}</p>}
             </div>
 
-            {/* Phone */}
+           
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
                 Phone Number (optional)
@@ -244,7 +244,7 @@ const Signup = () => {
               {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone}</p>}
             </div>
 
-            {/* Date of Birth */}
+       
             <div>
               <label htmlFor="dob" className="block text-sm font-medium text-gray-700">
                 Date of Birth (optional)
@@ -263,12 +263,12 @@ const Signup = () => {
             </div>
           </div>
 
-          {/* Submit Button */}
+    
           <div className="space-y-4">
             <button
               onClick={handleSubmit}
               type="submit"
-              // disabled={!isFormValid() || isLoading}
+              
               className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-gray-900 ${
                 isFormValid() && !isLoading ? "bg-indigo-600 hover:bg-indigo-700" : "bg-indigo-300"
               } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
@@ -277,7 +277,6 @@ const Signup = () => {
             </button>
           </div>
 
-          {/* Terms and Conditions */}
           <div className="text-sm text-center">
             <p className="text-gray-600">
               By signing up, you agree to our{" "}

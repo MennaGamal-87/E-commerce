@@ -29,7 +29,7 @@ const AddProduct=({cart,user})=>{
     
     return(
         <>
-        {/* <Header cart={cart} user={user}/> */}
+      
         <div className="w-[60%] m-auto mt-10 rounded-3xl py-10 bg-gray-900 text-center">
             <div className="flex flex-col">
                 <label className="text-white font-bold ">Title</label>

@@ -3,49 +3,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
  
-// const TABLE_HEAD = ["Title", "Price", "Image", 'Operations'];
- 
-// const TABLE_ROWS = [
-//   {
-//     name: "John Michael",
-//     job: "Manager",
-//     date: "23/04/18",
-//   },
-//   {
-//     name: "Alexa Liras",
-//     job: "Developer",
-//     date: "23/04/18",
-//   },
-//   {
-//     name: "Laurent Perrier",
-//     job: "Executive",
-//     date: "19/09/17",
-//   },
-//   {
-//     name: "Michael Levi",
-//     job: "Developer",
-//     date: "24/12/08",
-//   },
-//   {
-//     name: "Richard Gran",
-//     job: "Manager",
-//     date: "04/10/21",
-//   },
-// ];
  
 const AdminDashboard=()=> {
     const[products,setProducts]=useState([]);
-    //     useEffect(() => {
-
-            
-    //        fetch('http://localhost:3000/products')
-    //        .then((data)=>{
-    //            return data.json();
-    //        }).then(res=>{
-    //            console.log(res)
-    //            setProducts(res)
-    //        })
-    //      }, []);
     const[users,setusers]=useState([])
     const userNum=users.length
     const productsNum=products.length
@@ -79,7 +39,7 @@ const AdminDashboard=()=> {
    <div className="w-[40%] m-auto bg-white rounded-3xl text-center p-4">
       <h1 className=" text-1xl font-medium">Users</h1>
       <h1 className="my-3">{userNum}</h1>
-      {/* <h1>{users[userNum-1]}</h1> */}
+     
       <Button className="text-gray-900"onClick={()=>navigate('/admin/users')} >Show All Users</Button>
     </div>
     <div  className="w-[40%] m-auto bg-white rounded-3xl text-center p-2">

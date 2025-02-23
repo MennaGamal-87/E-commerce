@@ -14,16 +14,16 @@ import { Link, useNavigate } from "react-router-dom";
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
     const [error,setError]=useState('')
-    const [isChecked, setIsChecked] = useState(false); // State for checkbox
+    const [isChecked, setIsChecked] = useState(false); 
 
     const navigate=useNavigate()
 
     const handleLogin = (e) => {
      
         e.preventDefault();
-        if (!isChecked) { // Check if checkbox is checked
+        if (!isChecked) { 
           alert('You must agree to the Terms and Conditions.');
-          return; // Stop further execution
+          return;
         }
         axios
           .get('http://localhost:3000/users', {
@@ -32,8 +32,8 @@ import { Link, useNavigate } from "react-router-dom";
           .then((response) => {
             console.log(response)
             if (response.data.length > 0) {
-              setUser(response.data[0]); // Set the authenticated user
-              navigate('/products'); // Redirect to home page
+              setUser(response.data[0]);
+              navigate('/products');
               
             } else {
               setError('Invalid email or password');

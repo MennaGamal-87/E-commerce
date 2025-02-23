@@ -23,9 +23,7 @@ const UsersDashboard=()=> {
 
          const changeUserRole =  (userId, newRole) => {
             try {
-            //    axios.put(`http://localhost:3000/users/${userId}`, {
-            //     Role: newRole,
-            //   });
+           
               axios({
                 method:'post',
                 url:`http://localhost:3000/users/${userId}`,
