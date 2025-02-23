@@ -89,7 +89,7 @@ const Cart=({cart,setCart})=>{
                                     </svg>
                                 </button>
                             </div>
-                            <h6 className="text-indigo-600 font-manrope font-bold text-2xl leading-9 text-right">${product.price}</h6>
+                            <h6 className="text-indigo-600 font-manrope font-bold text-2xl leading-9 text-right">${product.price * quantity}</h6>
                         </div>
                     </div>
                 </div>

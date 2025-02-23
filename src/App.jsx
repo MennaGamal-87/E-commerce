@@ -39,10 +39,7 @@ const navigate=useNavigate()
    
 
   }
-  const logOut=()=>{
-    navigate('/signin')
-    user=null
-  }
+ 
   return (
     <>
     <div className="bg-gray-200 relative top-15">
@@ -55,11 +52,11 @@ const navigate=useNavigate()
           <Route path="/products" element={<Shop user={user} addToCart={addToCart} />} />
           <Route path="/products/:id" element={<ProductDetails  addToCart={addToCart} />} />
           <Route path="/signup" element={<Signup setUser={setUser} />} />
-          {/* ... other routes */}
+         
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/products" element={<ProductsDashboard />} />
           <Route path="/admin/users" element={<UsersDashboard />} />
-          <Route path="/profile" element={<Profile logOut={logOut} user={user} />} />
+          <Route path="/profile" element={<Profile  user={user} />} />
           <Route path="/admin/products/edit/:productId" element={<EditProduct />} />
           <Route path="/admin/products/add" element={<AddProduct cart={cart} user={user} />} />
         </Routes>

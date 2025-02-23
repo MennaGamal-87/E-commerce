@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 import DropDownMenu from "./DropDownMenu";
 
 
-const Header=({cart,user,logOut})=>{
+const Header=({cart,user})=>{
 const [openNav, setOpenNav] = useState(false);
  useEffect(() => {
     window.addEventListener(
@@ -26,7 +26,10 @@ const [openNav, setOpenNav] = useState(false);
       () => window.innerWidth >= 960 && setOpenNav(false),
     );
   }, []);
- 
+  const logOut=()=>{
+    navigate('/signin')
+    user=null
+  }
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
